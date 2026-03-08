@@ -50,22 +50,6 @@ def main():
     results = {}
 
     # ---------------------------------------------------------
-    # DFS
-    # ---------------------------------------------------------
-    dfs = DFS(maze)
-    res_dfs = dfs.search()
-    results["DFS"] = res_dfs
-
-    print("=== Exploration DFS ===")
-    print_maze_with_exploration(maze, res_dfs["explored"])
-
-    print("=== Chemin DFS ===")
-    print_maze_with_path(maze, res_dfs["path"])
-
-    print_path_list(res_dfs["path"])
-    print_stats("DFS", res_dfs)
-
-    # ---------------------------------------------------------
     # BFS
     # ---------------------------------------------------------
     bfs = BFS(maze)
@@ -80,6 +64,22 @@ def main():
 
     print_path_list(res_bfs["path"])
     print_stats("BFS", res_bfs)
+
+    # ---------------------------------------------------------
+    # DFS
+    # ---------------------------------------------------------
+    dfs = DFS(maze)
+    res_dfs = dfs.search()
+    results["DFS"] = res_dfs
+
+    print("=== Exploration DFS ===")
+    print_maze_with_exploration(maze, res_dfs["explored"])
+
+    print("=== Chemin DFS ===")
+    print_maze_with_path(maze, res_dfs["path"])
+
+    print_path_list(res_dfs["path"])
+    print_stats("DFS", res_dfs)
 
     # ---------------------------------------------------------
     # A*
