@@ -6,7 +6,7 @@ class Maze:
         self.size = size
         
     # Seed FIXE pour un labyrinthe toujours identique
-        random.seed(42)
+        random.seed(123)
         
         self.grid = [['#' for _ in range(size)] for _ in range(size)]
         self.start = (1, 1)
